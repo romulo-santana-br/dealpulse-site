@@ -28,4 +28,4 @@ Acompanhe as novidades e faça parte da comunidade.
 
 ---
 
-*O DealPulse divulga oportunidades de produtos vendidos por lojas parceiras ou independentes. Os preços, estoques e condições podem mudar sem aviso. Quando um link gerar comissão de afiliado, sua natureza promocional será identificada. O DealPulse não é uma loja nem garante descontos ou disponibilidade.*
+*O DealPulse divulga oportunidades de produtos vendidos por lojas e marketplaces externos. Os preços, estoques e condições podem mudar sem aviso. Quando um link gerar comissão de afiliado, sua natureza promocional será identificada. O DealPulse não é uma loja nem garante descontos ou disponibilidade.*
