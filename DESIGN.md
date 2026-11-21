@@ -6,7 +6,7 @@ Landing pública de curadoria de ofertas, voltada a pessoas no Brasil que querem
 
 ## North star
 
-**Mais contexto. Menos barulho.** Clareza editorial de um projeto técnico que prioriza informações verificáveis e respeita o tempo do visitante. A experiência não deve prometer preços, receita, aprovação de programas ou disponibilidade de ofertas não comprovados.
+**Ofertas no radar. Você no controle.** A promessa editorial é facilitar a descoberta de oportunidades, com convite direto ao Telegram. A página vende o benefício de participar, não a arquitetura do bot. Nunca prometer economia garantida, quantidade de ofertas ou resultados ainda não comprovados.
 
 ## Identidade
 
@@ -21,10 +21,10 @@ A fonte principal é a pilha local Segoe UI / Inter / sistema / Arial. Pequenos 
 
 ## Composição
 
-- **Hero dividido:** tese concisa à esquerda e o **fluxo de curadoria** à direita.
-- **Assinatura visual:** painel "A oferta chega. O contexto fica.", com sequência real de três etapas (identificar, organizar, compartilhar). É uma representação do processo planejado, **não uma amostra de produto nem métrica inventada**.
-- **Seção de princípios:** informação, frequência e transparência.
-- **Bloco de manifesto e último convite:** um único destino, repetido no topo, hero e fim para reduzir esforço de navegação.
+- **Hero dividido:** convite e benefício do grupo à esquerda; um painel com os três passos do visitante à direita.
+- **Assinatura visual:** painel "Menos busca. Mais descobertas.", com a sequência de participação (entrar, acompanhar, escolher). É uma promessa de experiência, **não uma amostra de produto nem métrica inventada**.
+- **Seção de benefícios:** descoberta em um só lugar, dados úteis quando disponíveis e liberdade para decidir.
+- **Bloco de posicionamento e último convite:** uma única ação prioritária, repetida no topo, hero e fim para facilitar a conversão.
 
 ## Comportamento e acessibilidade
 
@@ -36,7 +36,7 @@ A fonte principal é a pilha local Segoe UI / Inter / sistema / Arial. Pequenos 
 
 ## Copy e integridade
 
-- Deixar explícito o estágio de preparação/testes e não afirmar que o sistema já distribui ofertas reais.
+- Priorizar benefício imediato ao visitante e tom convidativo; deixar a informação de que o grupo está começando em texto discreto e visível, sem afirmar que já distribui ofertas reais.
 - Não confundir links de afiliados próprios com URLs diretas; identificar publicidade quando implementada.
 - Não implicar vínculo oficial com Amazon, Shopee, Magalu, Mercado Livre ou Telegram.
-- Evitar contadores de membros, descontos ou depoimentos fictícios.
+- Evitar contadores de membros, descontos, urgência artificial, depoimentos fictícios ou promessas de frequência.
