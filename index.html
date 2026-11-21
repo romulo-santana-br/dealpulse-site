@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10273f">
+  <meta name="description" content="DealPulse é um projeto independente de curadoria e divulgação de ofertas. Conheça a proposta e acesse o grupo no Telegram.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="DealPulse — Mais contexto. Menos barulho.">
+  <meta property="og:description" content="Curadoria de ofertas em preparação. Conheça o DealPulse e entre no grupo do Telegram.">
+  <meta property="og:url" content="https://romulo-santana-br.github.io/dealpulse-site/">
+  <meta name="color-scheme" content="light">
+  <title>DealPulse — Mais contexto. Menos barulho.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2310273f'/%3E%3Cpath d='M15 42L28 27L36 33L48 17' stroke='%236ce2c9' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M37 17h11v11' fill='none' stroke='%236ce2c9' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --navy: #10273f;
+      --navy-deep: #081b30;
+      --navy-soft: #294660;
+      --blue: #315fed;
+      --blue-hover: #214dcf;
+      --mint: #6ce2c9;
+      --paper: #f2f7fa;
+      --white: #ffffff;
+      --muted: #516b80;
+      --line: #d2e0e8;
+      --focus: #ed853b;
+      --radius: 19px;
+      --content: 1160px;
+    }
+    *,*::before,*::after { box-sizing:border-box }
+    html { scroll-behavior:smooth; scroll-padding-top:105px; scrollbar-color:#9eb4c6 var(--paper) }
+    body { margin:0; background:var(--paper); color:var(--navy); font-family:"Segoe UI",Inter,-apple-system,BlinkMacSystemFont,Arial,sans-serif; line-height:1.5; -webkit-font-smoothing:antialiased; overflow-wrap:break-word }
+    a { color:inherit }
+    a:focus-visible { outline:3px solid var(--focus); outline-offset:4px }
+    ::selection { background:#b5eddf; color:var(--navy-deep) }
+    .container { width:min(var(--content),calc(100% - 56px)); margin-inline:auto }
+    .topbar { background:rgba(255,255,255,.93); border-bottom:1px solid var(--line) }
+    .nav { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:24px }
+    .brand { display:inline-flex; align-items:center; gap:11px; text-decoration:none; white-space:nowrap; font-size:22px; font-weight:850; letter-spacing:-.075em; line-height:1 }
+    .brand-symbol { display:inline-grid; place-items:center; width:39px; height:39px; border-radius:12px; color:var(--mint); background:var(--navy) }
+    .brand-symbol svg { width:24px; height:24px }
+    .brand-dot { color:var(--blue) }
+    .nav-links { display:flex; align-items:center; gap:28px }
+    .nav-links a { font-size:13px; font-weight:700; text-decoration:none }
+    .nav-links a:not(.nav-button) { color:var(--muted); transition:color .2s }
+    .nav-links a:not(.nav-button):hover { color:var(--navy) }
+    .nav-button { color:#fff; background:var(--navy); border-radius:11px; padding:12px 17px; transition:background .2s }
+    .nav-button:hover { background:var(--navy-soft) }
+    .hero { padding:87px 0 94px; display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); gap:54px; align-items:center }
+    .eyebrow { color:var(--blue); display:flex; gap:11px; align-items:center; font-size:11px; font-weight:850; text-transform:uppercase; letter-spacing:.17em }
+    .eyebrow::before { content:""; width:8px; height:8px; background:var(--blue); border-radius:50%; flex-shrink:0 }
+    h1,h2,h3,p { margin-top:0 }
+    h1 { font-size:clamp(50px,6.1vw,83px); line-height:.99; font-weight:860; letter-spacing:-.088em; margin:25px 0 24px; max-width:700px }
+    h1 span { color:var(--blue) }
+    .intro { color:var(--muted); max-width:560px; font-size:18px; line-height:1.72; margin-bottom:0 }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:32px }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:13px; text-align:center; padding:15px 22px; border-radius:12px; min-height:54px; text-decoration:none; font-size:14px; font-weight:780; transition:background .2s,transform .2s,border-color .2s; cursor:pointer }
+    .button:hover { transform:translateY(-2px) }
+    .button-primary { background:var(--blue); color:#fff }
+    .button-primary:hover { background:var(--blue-hover) }
+    .button-secondary { background:#fff; border:1px solid #b9ceda; color:var(--navy) }
+    .button-secondary:hover { border-color:#8cabbd; background:#e9f2f8 }
+    .fine-print { color:#657d90; font-size:12px; line-height:1.7; max-width:520px; margin:15px 0 0 }
+    .signal-panel { background:var(--navy); color:#fff; border-radius:28px; padding:29px; min-height:482px; overflow:hidden; position:relative; box-shadow:0 28px 56px rgba(17,38,59,.13) }
+    .signal-panel::after { content:""; pointer-events:none; position:absolute; width:320px; height:320px; border-radius:50%; right:-166px; bottom:-168px; border:1px solid rgba(108,226,201,.19); box-shadow:0 0 0 53px rgba(108,226,201,.045), 0 0 0 109px rgba(108,226,201,.024) }
+    .panel-top { position:relative; z-index:1; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; font:700 11px ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing:.12em; color:#b7cadd }
+    .panel-status { color:var(--mint); display:inline-flex; align-items:center; gap:7px }
+    .panel-status::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--mint) }
+    .panel-heading { position:relative; z-index:1; font-size:34px; font-weight:820; line-height:1.09; letter-spacing:-.062em; margin:61px 0 28px; max-width:355px }
+    .panel-heading em { font-style:normal; color:var(--mint) }
+    .steps { position:relative; z-index:1; display:grid; gap:11px }
+    .step { display:flex; align-items:center; gap:15px; padding:15px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.07); border-radius:15px }
+    .step-index { display:grid; place-items:center; flex:0 0 41px; height:41px; border-radius:12px; background:rgba(108,226,201,.14); color:var(--mint); font:750 13px ui-monospace,SFMono-Regular,Consolas,monospace }
+    .step strong { display:block; font-size:14px; margin-bottom:3px }
+    .step small { display:block; color:#b5c9da; font-size:12px; line-height:1.4 }
+    .principles { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#edf4f8 }
+    .principles-inner { min-height:67px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap }
+    .principles span { font-size:11px; font-weight:850; text-transform:uppercase; letter-spacing:.16em; color:#506d80 }
+    .principles i { width:5px; height:5px; background:var(--blue); border-radius:50%; display:block }
+    .section { padding:99px 0 }
+    .section-title-row { display:grid; grid-template-columns:1fr 340px; gap:30px; align-items:end; margin-bottom:36px }
+    .label { color:var(--blue); text-transform:uppercase; font-weight:850; font-size:11px; letter-spacing:.17em; margin-bottom:14px }
+    h2 { font-size:clamp(35px,4.6vw,55px); line-height:1.07; letter-spacing:-.07em; font-weight:820; margin:0 }
+    .section-title-row p { color:var(--muted); line-height:1.7; font-size:15px; margin:0 }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px }
+    .card { border:1px solid var(--line); border-radius:var(--radius); background:#fff; padding:30px 26px 34px; min-height:241px }
+    .card-tag { font:750 11px ui-monospace,SFMono-Regular,Consolas,monospace; background:#eaf4ef; color:#34665b; padding:8px 10px; border-radius:8px; display:inline-block }
+    h3 { font-size:21px; line-height:1.21; letter-spacing:-.045em; font-weight:780; margin:31px 0 12px }
+    .card p { color:var(--muted); line-height:1.7; font-size:14px; margin:0 }
+    .manifesto { padding-bottom:96px }
+    .manifesto-inner { background:#dfeafa; border-radius:26px; padding:55px 58px; display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:end }
+    .manifesto-inner h2 { font-size:clamp(34px,3.6vw,48px) }
+    .manifesto-inner p { line-height:1.8; font-size:15px; color:var(--navy-soft); margin:0 }
+    .community { background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+    .community-inner { display:flex; align-items:center; justify-content:space-between; gap:36px; padding:78px 0 }
+    .community-copy { max-width:690px }
+    .community h2 { margin-bottom:19px }
+    .community p { color:var(--muted); max-width:640px; font-size:16px; line-height:1.75; margin:0 }
+    .community-action { width:260px; flex-shrink:0; text-align:center }
+    .community-action .button { width:100% }
+    .community-action small { display:block; font-size:12px; color:#61798c; margin-top:14px; line-height:1.5 }
+    footer { padding:31px 0 42px }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:25px }
+    footer .brand { font-size:20px }
+    footer p { color:#587186; font-size:12px; line-height:1.7; max-width:620px; margin:0; text-align:right }
+    footer strong { color:var(--navy) }
+    @media(max-width:980px) {
+      .hero { grid-template-columns:1fr; padding:65px 0 78px; gap:36px }
+      .signal-panel { min-height:450px }
+      .section-title-row { grid-template-columns:1fr; gap:20px }
+      .section-title-row p { max-width:630px }
+      .manifesto-inner { grid-template-columns:1fr; gap:24px }
+    }
+    @media(max-width:650px) {
+      .container { width:min(var(--content),calc(100% - 36px)) }
+      .nav { min-height:70px }
+      .nav-links { gap:12px }
+      .nav-links a:not(.nav-button) { display:none }
+      .nav-button { padding:11px 12px; font-size:12px }
+      .brand { font-size:19px }
+      .brand-symbol { width:35px; height:35px; border-radius:10px }
+      .hero { padding:54px 0 70px; gap:30px }
+      h1 { font-size:clamp(47px,12vw,67px) }
+      .intro { font-size:16px }
+      .actions { align-items:stretch }
+      .actions .button { flex:1 1 200px }
+      .signal-panel { border-radius:21px; padding:23px 21px; min-height:461px }
+      .panel-heading { font-size:30px; margin:58px 0 29px }
+      .principles-inner { padding:19px 0; justify-content:flex-start; column-gap:14px; row-gap:10px }
+      .principles i { display:none }
+      .principles span { font-size:10px }
+      .section { padding:73px 0 }
+      .cards { grid-template-columns:1fr }
+      .card { min-height:0 }
+      .manifesto { padding-bottom:70px }
+      .manifesto-inner { padding:36px 28px }
+      .community-inner { display:block; padding:65px 0 }
+      .community-action { width:100%; text-align:left; margin-top:27px }
+      .footer-inner { flex-direction:column; align-items:flex-start; gap:16px }
+      footer p { text-align:left }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto }
+      .button,.nav-button,.nav-links a { transition:none }
+      .button:hover { transform:none }
+    }
+    @media(forced-colors:active) { .button { border:1px solid ButtonText } .panel-status::before,.eyebrow::before { border:1px solid CanvasText } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="DealPulse — início">
+        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18 10 10l4 3 7-9M14 4h7v7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        dealpulse<span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#sobre">Sobre o projeto</a>
+        <a class="nav-button" href="https://t.me/+gbrS_rpXNnlmNWJh" target="_blank" rel="noopener noreferrer">Entrar no grupo ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="container hero" aria-labelledby="titulo-principal">
+      <div>
+        <div class="eyebrow">Curadoria de ofertas · projeto em preparação</div>
+        <h1 id="titulo-principal">Mais contexto.<br><span>Menos barulho.</span></h1>
+        <p class="intro">O DealPulse é um projeto de curadoria de ofertas que pretende reunir informações úteis sobre produtos e compartilhá-las em uma comunidade no Telegram, com clareza e sem notificações em excesso.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://t.me/+gbrS_rpXNnlmNWJh" target="_blank" rel="noopener noreferrer">Entrar no grupo do Telegram <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="#como-funciona">Entenda a proposta <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="fine-print">Grupo acessível por convite. Projeto em fase de preparação e testes; a disponibilidade de ofertas pode variar.</p>
+      </div>
+      <div class="signal-panel" aria-label="Etapas planejadas de curadoria do DealPulse">
+        <div class="panel-top"><span>DEALPULSE / FLUXO DE OFERTAS</span><span class="panel-status">EM TESTES</span></div>
+        <p class="panel-heading">A oferta chega.<br><em>O contexto fica.</em></p>
+        <div class="steps">
+          <div class="step"><div class="step-index" aria-hidden="true">01</div><div><strong>Identificar oportunidades</strong><small>Fontes autorizadas e links de produtos</small></div></div>
+          <div class="step"><div class="step-index" aria-hidden="true">02</div><div><strong>Organizar o essencial</strong><small>Preço ou cupom atribuído à fonte</small></div></div>
+          <div class="step"><div class="step-index" aria-hidden="true">03</div><div><strong>Compartilhar com critério</strong><small>Publicações com intervalos no Telegram</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="principles" aria-label="Princípios do projeto">
+      <div class="container principles-inner"><span>Clareza</span><i aria-hidden="true"></i><span>Respeito ao tempo</span><i aria-hidden="true"></i><span>Transparência</span><i aria-hidden="true"></i><span>Curadoria</span></div>
+    </div>
+
+    <section class="container section" id="como-funciona" aria-labelledby="como-funciona-titulo">
+      <div class="section-title-row">
+        <div><p class="label">A proposta</p><h2 id="como-funciona-titulo">Só o que ajuda<br>a decidir melhor.</h2></div>
+        <p>O objetivo não é publicar cada produto encontrado. Queremos organizar informações para que você escolha o que merece sua atenção.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><span class="card-tag">01 / INFORMAÇÃO</span><h3>Dados essenciais</h3><p>Os anúncios podem reunir descrição, preço ou cupom informado pela fonte. Informações não confirmadas serão tratadas como tal.</p></article>
+        <article class="card"><span class="card-tag">02 / FREQUÊNCIA</span><h3>Menos excesso</h3><p>O projeto foi pensado para respeitar intervalos entre publicações, evitando uma sequência interminável de notificações.</p></article>
+        <article class="card"><span class="card-tag">03 / TRANSPARÊNCIA</span><h3>Links identificados</h3><p>Quando houver links de afiliados, isso será informado. Preço, estoque e condições devem ser conferidos na loja antes da compra.</p></article>
+      </div>
+    </section>
+
+    <section class="container manifesto" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="manifesto-inner">
+        <div><p class="label">Sobre o projeto</p><h2 id="sobre-titulo">Tecnologia para<br>compartilhar melhor.</h2></div>
+        <p>O DealPulse é uma iniciativa independente em desenvolvimento. Estamos preparando uma rotina de curadoria e publicação no Telegram. Não vendemos os produtos diretamente, não garantimos descontos ou disponibilidade e não somos representantes oficiais das lojas citadas.</p>
+      </div>
+    </section>
+
+    <section class="community" id="telegram" aria-labelledby="telegram-titulo">
+      <div class="container community-inner">
+        <div class="community-copy"><p class="label">Comunidade</p><h2 id="telegram-titulo">Acompanhe pelo Telegram.</h2><p>O grupo já possui um convite de entrada. Você pode conhecer a comunidade enquanto o projeto é preparado. As futuras publicações poderão conter links promocionais identificados.</p></div>
+        <div class="community-action"><a class="button button-primary" href="https://t.me/+gbrS_rpXNnlmNWJh" target="_blank" rel="noopener noreferrer">Abrir grupo no Telegram <span aria-hidden="true">↗</span></a><small>O link abre o Telegram. A participação segue as regras do grupo.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand" href="#inicio" aria-label="DealPulse — voltar ao início"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18 10 10l4 3 7-9M14 4h7v7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>dealpulse<span class="brand-dot" aria-hidden="true">.</span></a>
+      <p><strong>Projeto independente, em desenvolvimento.</strong> Os produtos são vendidos por plataformas externas. Links de afiliados, quando utilizados, serão identificados.<br>© 2026 DealPulse.</p>
+    </div>
+  </footer>
+</body>
+</html>
