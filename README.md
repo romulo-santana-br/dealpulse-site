@@ -1,36 +1,31 @@
-# DealPulse — site público
+# DealPulse
 
-Landing page estática de apresentação do projeto [DealPulse](https://romulo-santana-br.github.io/dealpulse-site/).
+### Ofertas no radar. Você no controle.
 
-## Proposta
+Cansou de procurar boas oportunidades em várias lojas? **Deixe as ofertas virem para o seu radar.**
 
-Apresentar a curadoria de ofertas em desenvolvimento e oferecer acesso ao grupo Telegram por meio do convite fornecido pelo responsável. O site **não é uma loja**, não hospeda o bot e não substitui os termos dos programas de afiliados.
+O **DealPulse** é uma comunidade no Telegram para quem gosta de descobrir produtos, acompanhar preços e aproveitar cupons quando aparecerem. A ideia é simples: reunir achados interessantes em um só lugar para você olhar, comparar e decidir no seu tempo.
 
-## Acesso
+### Entre para o grupo
 
-- **Site (após ativar GitHub Pages):** https://romulo-santana-br.github.io/dealpulse-site/
-- **Grupo Telegram:** https://t.me/+gbrS_rpXNnlmNWJh
-- **Repositório:** https://github.com/romulo-santana-br/dealpulse-site
+**[Quero entrar no DealPulse pelo Telegram](https://t.me/+gbrS_rpXNnlmNWJh)**
 
-**Atenção:** a URL acima é um convite para grupo privado. Como consta em um repositório público e na landing, **qualquer visitante pode vê-la e tentar entrar**. Não aponte este link para o grupo reservado exclusivamente a testes fechados do bot; para testes sem audiência, use outro grupo. Se quiser retirar o acesso, revogue o convite no Telegram e atualize os links da página.
+O convite já está disponível. A comunidade está começando, e as primeiras publicações serão compartilhadas gradualmente.
 
-## Publicação GitHub Pages
+### Por que acompanhar?
 
-1. Abra **Settings → Pages** no repositório.
-2. Em **Build and deployment**, escolha **Deploy from a branch**.
-3. Selecione a branch **main** e o diretório **/(root)**; clique em **Save**.
-4. Aguarde o GitHub informar a URL publicada e abra o site para verificar o botão **Entrar no grupo do Telegram**.
+- **Achados em um só lugar.** Menos tempo procurando, mais facilidade para descobrir oportunidades.
+- **Informação que ajuda.** Produto, preço ou cupom quando disponíveis, de um jeito direto.
+- **Você decide.** Veja o que interessa, confira as condições na loja e escolha se vale comprar.
 
-Nenhum Cloudflare, build, framework, token ou serviço externo é necessário.
+### Seu próximo achado pode estar a um clique
 
-## Manutenção
+Acompanhe as novidades e faça parte da comunidade.
 
-- O site está inteiro em [index.html](index.html): HTML e CSS puros, sem JavaScript e sem bibliotecas remotas.
-- Para alterar o destino dos botões, edite **todas as ocorrências** do endereço do Telegram em index.html.
-- Para trocar cores, tipografia ou estrutura, siga [DESIGN.md](DESIGN.md).
-- Não adicione credenciais, IDs sensíveis, códigos do DealPulse privado ou dados pessoais ao site público.
-- Ao publicar ofertas patrocinadas, identifique claramente os links de afiliados conforme o programa aplicável.
+**[Entrar no grupo de ofertas](https://t.me/+gbrS_rpXNnlmNWJh)**
 
-## Limite de uso para cadastros de afiliados
+[Conhecer o DealPulse](https://romulo-santana-br.github.io/dealpulse-site/)
 
-A existência da página não garante aprovação na Amazon nem em outro programa. Um programa pode exigir site estabelecido, conteúdo original, tráfego ou mídias específicas e pode não autorizar o Telegram ou publicação automatizada. Declare apenas os canais realmente controlados e autorizados.
+---
+
+*O DealPulse divulga oportunidades de produtos vendidos por lojas parceiras ou independentes. Os preços, estoques e condições podem mudar sem aviso. Quando um link gerar comissão de afiliado, sua natureza promocional será identificada. O DealPulse não é uma loja nem garante descontos ou disponibilidade.*
